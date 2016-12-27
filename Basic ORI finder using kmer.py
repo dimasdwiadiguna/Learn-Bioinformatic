@@ -14,7 +14,7 @@ def CountDict(Text, k):
     Count = {}
     for i in range(len(Text)-k+1):                      #For every letter position from 0 to k-1
         Pattern = Text[i:i+k]                           #...collect sequence consists of k letters to Pattern
-        Count[i] = PatternCount(Text, Pattern)          #...and input to PatternCount. Result is collected to Count
+        Count[i] = {PatternCount(Text, Pattern):Pattern}          #...and input to PatternCount. Result is collected to Count
     return Count
 
 print CountDict(DNA,4)
